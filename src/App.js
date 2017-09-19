@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+// import axios from 'axios';
+// import promise from 'promise';
 
 const DataTable = (props) => {
   return(
     <div>
-      <table>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>City</th>
-        </tr>
-        <tr>
-          <td>{props.fname}</td>
-          <td>{props.lname}</td>
-          <td>{props.city}</td>
-        </tr>
+      <table className='table'>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{props.fname}</td>
+            <td>{props.lname}</td>
+            <td>{props.city}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
@@ -534,7 +539,14 @@ const Table = (props) => {
   )
 }
 
-
+// class HandleAxiosGet extends Component {
+//   handleSubmit = (event) => {
+//     axios.get("http://www.filltext.com/?rows=100&fname=%7BfirstName%7D&lname=%7BlastName%7D&city=%7Bcity%7D&pretty=true")
+//       .then((response) => {
+//         console.log(response);
+//       })
+//   };
+// }
 
 class App extends Component {
   render() {
